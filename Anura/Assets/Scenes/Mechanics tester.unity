@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 250858309}
   - component: {fileID: 250858308}
   - component: {fileID: 250858307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 326719962}
   - component: {fileID: 326719961}
   - component: {fileID: 326719960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,6 +409,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326719958}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &505938188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505938189}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &505938189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505938188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1508506087}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527167823
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,7 +451,7 @@ GameObject:
   - component: {fileID: 527167827}
   - component: {fileID: 527167826}
   - component: {fileID: 527167825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +638,7 @@ GameObject:
   - component: {fileID: 1250365547}
   - component: {fileID: 1250365546}
   - component: {fileID: 1250365545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -700,7 +730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1444177885}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: teststage 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -757,6 +787,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1508506086}
   speed: 5
+  gravity: -9.8
+  groundCheck: {fileID: 505938189}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!143 &1508506086
 CharacterController:
   m_ObjectHideFlags: 0
@@ -788,6 +824,7 @@ Transform:
   m_Children:
   - {fileID: 131434556}
   - {fileID: 1947340459}
+  - {fileID: 505938189}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -919,5 +956,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828c8618722420949a5bd7cb58fcf1ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 250
+  mouseSensitivity: 300
   playerBody: {fileID: 1508506087}
