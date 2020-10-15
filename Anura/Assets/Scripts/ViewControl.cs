@@ -5,7 +5,7 @@ using UnityEngine;
 public class ViewControl : MonoBehaviour
 {
     //set mouse sensitivity
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 250f;
 
     //assign playerbody
     public Transform playerBody;
